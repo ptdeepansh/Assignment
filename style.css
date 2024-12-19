@@ -1,10 +1,10 @@
 *{
     padding: 0;
     margin: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #nav1{
-    height: 4vh;
+    height: 5vh;
     background-color: #b7302a;
     color: white;
     display: flex;
@@ -17,9 +17,24 @@
     color: white;
     font-size: 13px;
     margin-left: 15px;
+    text-decoration: none;
+    position: relative;
+}
+#nav1 a::after{
+    content: '';
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    transition: 0.4s;
+}
+#nav1 a:hover::after{
+    width: 75%;
 }
 #nav2{
-    height: 9vh;
+    height: 10vh;
     display: flex;
     justify-content: space-between;   
     align-items:center;
@@ -28,26 +43,120 @@
 }
 #nav2 a{
     margin-right: 30px;
-    color: black;
-    font-size: 14px;
-    font-weight: bold;
+    color: black; 
+    font-size: 15px;
+    font-weight: 550;
+    text-decoration: none;
+    position: relative;
+}
+#nav2 a::after{
+    content: '';
+    background-color: #b7302a;
+    margin-right: 10px;
+    position: absolute;
+    top: 40px;
+    height: 3px;
+    width: 0%;
+    bottom: 0;
+    right: 0;
+    transition: 0.5s;
+}
+#sec3{
+    width: 100%; align-items:center; display: flex; flex-direction: column; justify-content: center; margin-top: 7%; margin-bottom: 5%;
+}
+#sec3 p{
+    font-size: 35px; text-align: left;
+    width: 90%;
+    padding-bottom: 30px;
+}
+#main-menu a:hover{
+    color: #b7302a;
+}
+#main-menu a:hover::after{
+    color: #b7302a;
+    width: 90%;
+    cursor: grab;
+}
+#toggle-menu{
+    display: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    background-color: white;
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+#toggle-menu li:hover, #toggle-menu li a:hover{
+    color:#ffffff;
+    background-color: #b7302a;
+}
+#toggle-menu li:active{
+    color: #f9eb18;
+}
+#toggle-menu li{
+    margin-top: 15px;
+    text-decoration: none;
+    list-style: none;
+    font-size: 39px;
+    display: flex;
+    justify-content: start;
+    padding-left: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    
+}
+#main-menu li{
+    width: 100%;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style: none;
+}
+#toggle{
+    font-size: 21px;
+    color: #b7302a;
+    display: none;
 }
 #sec1{
     background-image: url("https://ekalblspindia.org/wp-content/uploads/2023/11/banner-1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vh;
-    background-color: #cccccc;
+    width: 100%;
+    height: 73vh;
+    
 }
 #sec2{
-    background-image: url("https://ekalblspindia.org/wp-content/uploads/2023/10/eductaion-crisis-bg.jpg");
+    display: flex; flex-direction: row; justify-content: center; align-items: center;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://ekalblspindia.org/wp-content/uploads/2023/10/eductaion-crisis-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height: 80vh;
     margin-bottom: 50vh;
 }
-#sec2::before{
+#sec2 h3{
+    font-size: 45px; font-weight: 300; line-height: 0.7; letter-spacing: 1px; word-spacing: 3px;
+}
+/* #sec2 p{
+    font-size: 20px; text-align: center;
+} */
+#sec2TextDvi{
+    color: white; text-align: left; z-index: 1; width: 41%; padding-left: 45px; padding-right: 50px; padding-top: 100px; height: 100%;
+}
+#twoCircles{
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    position: relative;
+}
+#mainofsec2{
+    width: 40%; text-align: center; align-items: center; height: 100%; margin-top: 100px; z-index: 1; padding-left: 50px; padding-right: 80px;
+}
+/* #sec2::before{
     content: '';
     position:absolute;
     top: 200;
@@ -56,7 +165,47 @@
     height: 80vh;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-    flex-wrap: wrap;
+} */
+#menu_btnp{
+    background-color: #b7302a; 
+    border-radius: 10px; 
+    height: 3.3vh; 
+    width: 8vw; 
+    color: white; 
+    border: 0;
+}
+#menu_btnp:hover{
+    cursor: grab;
+}
+#menu-close{
+    height: 89px;
+    /* display: flex;
+    justify-content: end;  */
+}
+#menu-close i{
+    font-size: 25px;
+    background-color: rgb(255, 255, 255);
+}
+#blurwala{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+.li-li{
+    width: 100%;
+}
+.li-li a{
+    width: 100%;
+    text-align: center;
+}
+.li-li img{
+    margin-left: 7px;
 }
 .icon-oo{
     display: flex;
@@ -87,4 +236,843 @@
     justify-content: center;
     align-items: center;
 }
-/* linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) */
+
+#TextSec2 h1{
+    font-size: 43px; 
+    font-weight: 400;
+}
+#TextSec2 p{
+    font-size: 21px; font-weight: 400;
+}
+.mobilefalse{
+    position: absolute;
+    bottom: 0;
+    visibility: hidden;
+    font-size: 15px; text-align: center; width: 150px; margin-top: 10px; color: #f9eb18;
+}
+
+@media(min-width: 771px) and (max-width: 1080px)
+{
+    #main-menu a{
+        font-size: 13px;
+        margin: 0;
+        padding: 0;     
+    }
+    #menu_btnp{
+        width: 10vw;
+        background-color: #b7302a;
+    }
+    #sec1{
+        height: 55vh;
+    }
+    #sec2{
+        padding: 0;
+        margin: 0;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        height: 85%;
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    #sec2TextDvi p{
+        text-align: left;
+    }
+    #sec2TextDvi{
+        padding: 0;
+        margin: 0;
+        width: 70%; padding-right: 50px; height: 100%;
+    }
+    #icon-oio{
+        margin-top: 15px;
+        height: 101px;
+        width: 70%;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        justify-content: space-between;
+    }
+    .circle-icon{
+        width: 21%;
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #twoCircles{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    #mainofsec2{
+        margin-top: 25px;
+        width: 60%;
+    }
+
+}
+/* First section responsive */
+@media(max-width: 960px) and (min-width: 877px) {
+    #sec1{
+        height: 50vh;
+    }
+}
+@media(max-width: 877px) and (min-width: 770px){
+    #sec1{
+        height: 45vh;
+    }
+    #sec3 p{
+        font-size: 30px;
+    }
+}
+@media(max-width: 770px){
+    #main-menu li, #nav1-Menu{
+        display: none;
+    }
+    #toggle{
+        display: block;
+        margin-right: 3vh;
+    }
+    #menu_btnp{
+        width: 108px;
+    }
+    
+}
+
+@media (max-width: 770px) and (min-width: 610px){
+    #sec1{
+        height: 35vh;
+    }
+    #sec3 p{
+        font-size: 25px;
+    }
+}
+@media(max-width: 610px) and (min-width: 532px){
+    #sec1{
+        height: 29vh;
+    }
+    #sec3 p{
+        font-size: 25px;
+    }
+}
+@media(max-width: 532px) and (min-width: 436px){
+    #sec1{
+        height: 25vh;
+    }
+    #sec3 p{
+        font-size: 25px;
+    }
+}
+@media(max-width: 436px) and (min-width: 350px){
+    #sec1{
+        height: 20vh;
+    }
+    #sec3 p{
+        font-size: 22px;
+    }
+}
+@media(max-width: 350px) and (min-width: 100px){
+    #sec1{
+        height: 16vh;
+    }
+    #sec3 p{
+        font-size: 20px;
+    }
+}
+/* End first section responsive */
+@media(max-width: 600px) and (min-width: 130px){
+    #toggle-menu{
+        width: 90%;
+    }
+}
+@media(max-width:820px) and (min-width:730px){
+    #sec2{
+        padding: 0;
+        margin: 0;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        height: 85%;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        background-size: cover;
+        background-attachment: '';
+    }
+    #sec2TextDvi p{
+        text-align: left;
+    }
+    #sec2TextDvi{
+        padding: 0;
+        margin: 0;
+        width: 70%; padding-right: 50px; height: 100%;
+    }
+    #icon-oio{
+        display: none;
+    }
+    .circle-icon{
+        margin-top: 40px;
+        width: 35%;
+        height: 21vh;
+        display: flex;
+        border: 4px solid white;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+    }
+    #twoCircles{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    #mainofsec2{
+        margin-top: 30px;
+        width: 60%;
+    }
+}
+@media(max-width:730px) and (min-width:670px){
+    /* #sec1{
+        background-position: 50cm;
+    } */
+    #sec2{
+        padding: 0;
+        margin: 0;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        height: 85%;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        background-attachment: scroll;
+    }
+    #sec2TextDvi p{
+        text-align: left;
+        font-size: 17px;
+    }
+    #sec2TextDvi h3{
+        font-size: 40px;
+    }
+    #sec2TextDvi{
+        padding: 0;
+        margin: 0;
+        width: 80%; padding-right: 50px; height: 100%;
+    }
+    #icon-oio{
+        display: none;
+    }
+    .circle-icon{
+        margin-top: 40px;
+        width: 35%;
+        height: 19vh;
+        display: flex;
+        border: 5px solid white;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+    }
+    #twoCircles{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    #mainofsec2{
+        margin-top: 30px;
+        width: 60%;
+    }
+    #mainofsec2 h1{
+        font-size: 2px;
+    }
+    #mainofsec2 p{
+        font-size: 6px;
+    }
+    #TextSec2 h1{
+        font-size: 43px; 
+    }
+    #TextSec2 p{
+        font-size: 21px;
+    }
+}
+@media(max-width:670px) and (min-width:640px){
+    #sec2{
+        padding: 0;
+        margin: 0;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        height: 85%;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
+    }
+    #sec2TextDvi p{
+        text-align: left;
+        font-size: 17px;
+    }
+    #sec2TextDvi h3{
+        font-size: 40px;
+    }
+    #sec2TextDvi{
+        padding: 0;
+        margin: 0;
+        width: 80%; padding-right: 50px; height: 100%;
+    }
+    #icon-oio{
+        display: none;
+    }
+    .circle-icon{
+        margin-top: 40px;
+        width: 33%;
+        height: 16vh;
+        display: flex;
+        border: 5px solid white;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+    }
+    #twoCircles{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    #mainofsec2{
+        margin-top: 30px;
+        width: 60%;
+    }
+    #mainofsec2 h1{
+        font-size: 2px;
+    }
+    #mainofsec2 p{
+        font-size: 6px;
+    }
+    #TextSec2 h1{
+        font-size: 43px; 
+    }
+    #TextSec2 p{
+        font-size: 21px;
+    }
+}
+@media(max-width:640px) and (min-width:596px){
+    #sec2{
+        padding: 0;
+        margin: 0;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        height: 85%;
+        padding-bottom: 10px;
+        padding-top: 30px;
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
+    }
+    #sec2TextDvi p{
+        text-align: left;
+        font-size: 17px;
+    }
+    #sec2TextDvi h3{
+        font-size: 40px;
+    }
+    #sec2TextDvi{
+        padding: 0;
+        margin: 0;
+        width: 80%; padding-right: 50px; height: 100%;
+    }
+    #icon-oio{
+        display: none;
+    }
+    .circle-icon{
+        margin-top: 40px;
+        width: 33%;
+        height: 16vh;
+        display: flex;
+        border: 5px solid white;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+    }
+    .mobilefalse{
+        position: relative;
+        visibility: visible;
+    }
+    #MobileFalse{
+        visibility: hidden;
+    }
+    #twoCircles{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #mainofsec2{
+        margin-top: 30px;
+        width: 60%;
+    }
+    #mainofsec2 h1{
+        font-size: 2px;
+    }
+    #TextSec2 h1{
+        font-size: 39px; 
+    }
+    #TextSec2 p{
+        font-size: 19px;
+    }
+    .mobilefalse p{
+        font-size: 20px;
+        color: #f9eb18;
+    }
+}
+@media(max-width:596px) and (min-width:546px){
+    #sec2{
+        padding: 0;
+        margin: 0;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        height: 85%;
+        padding-bottom: 10px;
+        padding-top: 30px;
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
+    }
+    #sec2TextDvi p{
+        text-align: left;
+        font-size: 17px;
+    }
+    #sec2TextDvi h3{
+        font-size: 40px;
+    }
+    #sec2TextDvi{
+        padding: 0;
+        margin: 0;
+        width: 80%; padding-right: 50px; height: 100%;
+    }
+    #icon-oio{
+        display: none;
+    }
+    .circle-icon{
+        margin-top: 40px;
+        width: 30%;
+        height: 14vh;
+        display: flex;
+        border: 5px solid white;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+    }
+    .mobilefalse{
+        position: relative;
+        visibility: visible;
+    }
+    #MobileFalse{
+        visibility: hidden;
+    }
+    #twoCircles{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #mainofsec2{
+        margin-top: 30px;
+        width: 60%;
+    }
+    #mainofsec2 h1{
+        font-size: 2px;
+    }
+    #TextSec2 h1{
+        font-size: 37px; 
+    }
+    #TextSec2 p{
+        font-size: 17px;
+    }
+    .mobilefalse p{
+        font-size: 20px;
+        color: #f9eb18;
+    }
+}
+@media(max-width:546px) and (min-width:400px){
+    #sec2{
+        padding: 0;
+        margin: 0;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        height: 85%;
+        padding-bottom: 10px;
+        padding-top: 30px;
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
+    }
+    #sec2TextDvi p{
+        text-align: justify;
+        font-size: 14px;
+    }
+    #sec2TextDvi h3{
+        font-size: 30px;
+    }
+    #sec2TextDvi{
+        padding: 0;
+        margin: 0;
+        width: 80%; padding-right: 10px; height: 100%;
+    }
+    #icon-oio{
+        display: none;
+    }
+    .circle-icon{
+        margin-top: 40px;
+        width: 55%;
+        height: 15vh;
+        display: flex;
+        border: 5px solid white;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+    }
+    .mobilefalse{
+        position: relative;
+        visibility: visible;
+    }
+    #MobileFalse{
+        visibility: hidden;
+    }
+    #twoCircles{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #mainofsec2{
+        margin-top: 30px;
+        width: '';
+    }
+    #mainofsec2 h1{
+        font-size: 2px;
+    }
+    #TextSec2 h1{
+        font-size: 35px; 
+    }
+    #TextSec2 p{
+        font-size: 17px;
+    }
+    .mobilefalse p{
+        font-size: 20px;
+        color: #f9eb18;
+    }
+}
+@media(max-width:400px) and (min-width:390px){
+    #sec2{
+        padding: 0;
+        margin: 0;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        height: 85%;
+        padding-bottom: 10px;
+        padding-top: 30px;
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
+    }
+    #sec2TextDvi p{
+        font-size: 14px;
+        text-align: justify;
+    }
+    #sec2TextDvi h3{
+        font-size: 25px;
+    }
+    #sec2TextDvi{
+        padding: 0;
+        margin: 0;
+        width: 80%; padding-right: 0px; height: 100%;
+    }
+    #icon-oio{
+        display: none;
+    }
+    .circle-icon{
+        margin-top: 40px;
+        width: 65%;
+        height: 20vh;
+        display: flex;
+        border: 5px solid white;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+    }
+    .mobilefalse{
+        position: relative;
+        visibility: visible;
+    }
+    #MobileFalse{
+        visibility: hidden;
+    }
+    #twoCircles{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #mainofsec2{
+        margin-top: 30px;
+        width: 60%;
+    }
+    #mainofsec2 h1{
+        font-size: 2px;
+    }
+    #TextSec2 h1{
+        font-size: 35px; 
+    }
+    #TextSec2 p{
+        font-size: 15px;
+    }
+    .mobilefalse p{
+        font-size: 20px;
+        color: #f9eb18;
+    }
+}
+@media(max-width:390px) and (min-width:350px){
+    #sec2{
+        padding: 0;
+        margin: 0;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        height: 85%;
+        padding-bottom: 10px;
+        padding-top: 30px;
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
+    }
+    #sec2TextDvi p{
+        font-size: 14px;
+        text-align: justify;
+    }
+    #sec2TextDvi h3{
+        font-size: 25px;
+    }
+    #sec2TextDvi{
+        padding: 0;
+        margin: 0;
+        width: 80%; padding-right: 0px; height: 100%;
+    }
+    #icon-oio{
+        display: none;
+    }
+    .circle-icon{
+        margin-top: 40px;
+        width: 50%;
+        height: 15vh;
+        display: flex;
+        border: 5px solid white;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+    }
+    .mobilefalse{
+        position: relative;
+        visibility: visible;
+    }
+    #MobileFalse{
+        visibility: hidden;
+    }
+    #twoCircles{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #mainofsec2{
+        margin-top: 30px;
+        width: 60%;
+    }
+    #mainofsec2 h1{
+        font-size: 2px;
+    }
+    #TextSec2 h1{
+        font-size: 35px; 
+    }
+    #TextSec2 p{
+        font-size: 15px;
+    }
+    .mobilefalse p{
+        font-size: 20px;
+        color: #f9eb18;
+    }
+}
+@media(max-width:350px) and (min-width:300px){
+    #sec2{
+        padding: 0;
+        margin: 0;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        height: 85%;
+        padding-bottom: 10px;
+        padding-top: 30px;
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
+    }
+    #sec2TextDvi p{
+        font-size: 14px;
+        text-align: justify;
+    }
+    #sec2TextDvi h3{
+        font-size: 25px;
+    }
+    #sec2TextDvi{
+        padding: 0;
+        margin: 0;
+        width: 80%; padding-right: 0px; height: 100%;
+    }
+    #icon-oio{
+        display: none;
+    }
+    .circle-icon{
+        margin-top: 40px;
+        width: 85%;
+        height: 15vh;
+        display: flex;
+        border: 5px solid white;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+    }
+    .mobilefalse{
+        position: relative;
+        visibility: visible;
+    }
+    #MobileFalse{
+        visibility: hidden;
+    }
+    #twoCircles{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #mainofsec2{
+        margin-top: 30px;
+        width: '';
+    }
+    #mainofsec2 h1{
+        font-size: 2px;
+    }
+    #TextSec2 h1{
+        font-size: 35px; 
+    }
+    #TextSec2 p{
+        font-size: 15px;
+    }
+    .mobilefalse p{
+        font-size: 20px;
+        color: #f9eb18;
+    }
+}
+@media(max-width:300px) and (min-width:150px){
+    #sec2{
+        padding: 0;
+        margin: 0;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        height: 85%;
+        padding-bottom: 10px;
+        padding-top: 30px;
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
+    }
+    #sec2TextDvi p{
+        font-size: 13px;
+        text-align: justify;
+    }
+    #sec2TextDvi h3{
+        font-size: 22px;
+    }
+    #sec2TextDvi{
+        padding: 0;
+        margin: 0;
+        width: 80%; padding-right: 0px; height: 100%;
+    }
+    #icon-oio{
+        display: none;
+    }
+    .circle-icon{
+        margin-top: 40px;
+        width: 65%;
+        height: 15vh;
+        display: flex;
+        border: 5px solid white;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+    }
+    .mobilefalse{
+        position: relative;
+        visibility: visible;
+    }
+    #MobileFalse{
+        visibility: hidden;
+    }
+    #twoCircles{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #mainofsec2{
+        margin-top: 30px;
+        width: 60%;
+    }
+    #mainofsec2 h1{
+        font-size: 2px;
+    }
+    #TextSec2 h1{
+        font-size: 30px; 
+    }
+    #TextSec2 p{
+        font-size: 14px;
+    }
+    .mobilefalse p{
+        font-size: 20px;
+        color: #f9eb18;
+    }
+    .li-li{
+        width: '';
+    }
+    .li-li a{
+        width: 100%;
+        text-align: left;
+    }
+}
